@@ -21,7 +21,7 @@ class Choice(models.Model):
     leads_to = models.ForeignKey(Paragraph, on_delete=models.CASCADE, related_name='incoming_choices')
 
     def __str__(self):
-        return self.choice_text
+        return f" Start: {self.paragraph}, Choices:{self.choice_text}, Leads to: {self.leads_to}"
 
 
 class Hero(models.Model):
