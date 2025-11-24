@@ -26,6 +26,9 @@ class Choice(models.Model):
 
 class Hero(models.Model):
     name = models.CharField(max_length=100, unique=True)
+    email = models.EmailField()
+    country = models.CharField(max_length=100)
+    age = models.IntegerField()
     current_paragraph = models.ForeignKey(Paragraph, on_delete=models.CASCADE)
 
     def __str__(self):
