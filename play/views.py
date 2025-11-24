@@ -28,4 +28,4 @@ def index(request):
     else:
         form = RegisterForm()
 
-    return render(request, contact.html, {'form':form})
+    return render(request, register.html, {'form':form})
